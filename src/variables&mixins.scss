@@ -1,0 +1,27 @@
+// Colors
+$blue: #0079ff;
+$gray: #697c9a;
+$light-blue: #4b6a9b;
+$dark-blue: #2b3442;
+$very-light-gray: #f6f8ff;
+$greyish-white: #fefefe;
+$white: #ffffff;
+$darker-blue: #141d2f;
+$less-darker-blue: #1e2a47;
+
+//hover color
+$hover-gray: #90a4d4;
+$hover-dark-blue: #222731;
+
+// Typography
+$space-mono: "Space Mono", monospace;
+
+// other variables
+$is-dark: true;
+
+//mixins
+@mixin flex-row-Hbetween-Vcenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

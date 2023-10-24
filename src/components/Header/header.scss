@@ -1,0 +1,63 @@
+@use "../../variables&mixins.scss" as *;
+
+header {
+  height: 38px;
+  color: $white;
+  @include flex-row-Hbetween-Vcenter;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .theme {
+    cursor: pointer;
+    padding-left: 3px;
+    width: 86px;
+    height: 20px;
+    @include flex-row-Hbetween-Vcenter;
+
+    span {
+      text-align: right;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      transition: 0s;
+    }
+
+    &:hover {
+      color: $hover-gray;
+
+      svg {
+        path {
+          fill: $hover-gray;
+        }
+      }
+    }
+  }
+}
+
+//light themed Header
+header.light {
+  color: $hover-dark-blue;
+
+  .theme {
+    span {
+      color: $gray;
+    }
+  }
+
+  &:hover {
+    .theme {
+      span {
+        color: $hover-dark-blue;
+      }
+
+      svg {
+        path {
+          fill: $hover-dark-blue;
+        }
+      }
+    }
+  }
+}

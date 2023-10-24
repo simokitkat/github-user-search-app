@@ -1,5 +1,8 @@
+import Main from "./components/Main/Main";
+import "./global-styles.scss";
+
 function App() {
-  return <div>Hello World</div>;
+  return <Main />;
 }
 
 export default App;

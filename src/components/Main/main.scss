@@ -1,0 +1,11 @@
+@use "../../variables&mixins.scss" as *;
+
+main {
+  height: 900px;
+  padding-top: 144px;
+
+  .container {
+    width: 730px;
+    margin: auto;
+  }
+}

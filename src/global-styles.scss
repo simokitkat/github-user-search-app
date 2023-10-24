@@ -1,0 +1,19 @@
+@use "./variables&mixins.scss" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  font-family: $space-mono;
+  background-color: $darker-blue;
+
+  &.light {
+    background-color: $very-light-gray;
+  }
+}
