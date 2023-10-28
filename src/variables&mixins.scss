@@ -8,10 +8,12 @@ $greyish-white: #fefefe;
 $white: #ffffff;
 $darker-blue: #141d2f;
 $less-darker-blue: #1e2a47;
+$error-red: #f74646;
 
 //hover color
 $hover-gray: #90a4d4;
 $hover-dark-blue: #222731;
+$hover-blue: #60abff;
 
 // Typography
 $space-mono: "Space Mono", monospace;
@@ -24,4 +26,12 @@ $is-dark: true;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin input-text {
+  color: $white;
+  font-family: $space-mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px; /* 138.889% */
 }

@@ -1,0 +1,82 @@
+@use "../../variables&mixins.scss" as *;
+
+form {
+  height: 69px;
+  border-radius: 15px;
+  background: $less-darker-blue;
+  margin: 35px 0 24px;
+  padding: 9.5px 10px 9.5px 32px;
+
+  .container {
+    max-width: 100%;
+    height: 100%;
+    @include flex-row-Hbetween-Vcenter;
+
+    .search {
+      gap: 23.94px;
+      @include flex-row-Hbetween-Vcenter;
+
+      input {
+        width: 254px;
+        height: 25px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        caret-color: $blue;
+        cursor: pointer;
+        @include input-text;
+
+        &::placeholder {
+          @include input-text;
+        }
+      }
+    }
+
+    .right {
+      @include flex-row-Hbetween-Vcenter;
+      gap: 24px;
+
+      span {
+        color: $error-red;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      button {
+        width: 106px;
+        height: 50px;
+        border: none;
+        background: $blue;
+        border-radius: 10px;
+        color: $white;
+        font-family: $space-mono;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+          background: $hover-blue;
+        }
+      }
+    }
+  }
+}
+
+//light themed Form
+
+form.light {
+  background: $greyish-white;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+
+  .container {
+    .search {
+      input {
+        color: $hover-dark-blue;
+
+        &::placeholder {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,15 @@
 import { useState } from "react";
 import Header from "../Header/Header";
 import "./main.scss";
+import Form from "../Form/Form";
+import useFetchData from "./useFetchData";
 
 export default function Main() {
   const [isDark, setIsDark] = useState(true);
+  const [user, setUser] = useState("octocat");
+  const { isError, setIsError, isLoading, data, fetchData } = useFetchData(
+    `https://api.github.com/users/${user}`
+  );
 
   const toggleTheme = () => {
     if (isDark) {
@@ -19,6 +25,14 @@ export default function Main() {
     <main>
       <div className="container">
         <Header isDark={isDark} toggleTheme={toggleTheme} />
+        <Form
+          isDark={isDark}
+          data={data}
+          fetchData={fetchData}
+          isError={isError}
+          setIsError={setIsError}
+          setUser={setUser}
+        />
       </div>
     </main>
   );
