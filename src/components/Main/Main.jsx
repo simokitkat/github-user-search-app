@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Header from "../Header/Header";
-import "./main.scss";
 import Form from "../Form/Form";
 import useFetchData from "./useFetchData";
+import User from "../User/User";
+import "./main.scss";
 
 export default function Main() {
   const [isDark, setIsDark] = useState(true);
@@ -32,6 +33,12 @@ export default function Main() {
           isError={isError}
           setIsError={setIsError}
           setUser={setUser}
+        />
+        <User
+          isDark={isDark}
+          data={data}
+          isLoading={isLoading}
+          isError={isError}
         />
       </div>
     </main>
