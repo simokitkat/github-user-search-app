@@ -61,3 +61,14 @@ header.light {
     }
   }
 }
+
+// Tablet
+@media (width<800px) {
+  header {
+    height: 39px;
+
+    .theme {
+      width: 89px;
+    }
+  }
+}

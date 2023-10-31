@@ -9,3 +9,15 @@ main {
     margin: auto;
   }
 }
+
+// Tablet
+@media (width<800px) {
+  main {
+    height: 1024px;
+    padding-top: 140px;
+
+    .container {
+      width: 573px;
+    }
+  }
+}

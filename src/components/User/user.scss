@@ -194,3 +194,16 @@
     }
   }
 }
+
+//Tablet
+@media (width<800px) {
+  .user {
+    height: 481px;
+    padding: 40px;
+
+    .loading,
+    .fetching-error {
+      font-size: 2rem;
+    }
+  }
+}

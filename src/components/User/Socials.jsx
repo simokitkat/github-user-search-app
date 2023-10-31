@@ -27,7 +27,11 @@ export default function Socials({ data }) {
         <div className={!data.twitter_username ? "not-available" : ""}>
           <Twitter />
           {data.twitter_username ? (
-            <span>{data.twitter_username}</span>
+            <span>
+              <a href={`https://twitter.com/${data.twitter_username}`}>
+                {data.twitter_username}
+              </a>
+            </span>
           ) : (
             <span>Not Available</span>
           )}
