@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Socials from "./Socials";
 import Stats from "./Stats";
+import UserContainerMobile from "./UserContainerMobile";
 import getDate from "./getDate";
 import "./user.scss";
 
@@ -38,12 +39,13 @@ export default function User({ isDark, data, isLoading, isError }) {
           {data.bio ? (
             <p className="bio">{data.bio}</p>
           ) : (
-            <p className="bio">This profile has no bio</p>
+            <p className="bio inactive">This profile has no bio</p>
           )}
           <Stats data={data} />
           <Socials data={data} />
         </div>
       </div>
+      <UserContainerMobile data={data} />
     </section>
   );
 }
