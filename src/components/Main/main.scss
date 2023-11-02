@@ -4,7 +4,7 @@ main {
   height: 900px;
   padding-top: 144px;
 
-  .container {
+  & > .container {
     width: 730px;
     margin: auto;
   }
@@ -19,8 +19,23 @@ main {
     height: 1024px;
     padding-top: 140px;
 
-    .container {
+    & > .container {
       width: 573px;
+    }
+  }
+}
+
+/*************
+*** Mobile ***
+**************/
+@media (width<620px) {
+  main {
+    height: 777px;
+    padding-top: 31px;
+
+    & > .container {
+      width: 87.2%;
+      min-width: 327px;
     }
   }
 }

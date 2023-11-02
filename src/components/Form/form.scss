@@ -82,3 +82,40 @@ form.light {
 }
 
 // No changes in the Tablet version
+
+/*************
+*** Mobile ***
+**************/
+
+@media (width<620px) {
+  form {
+    height: 60px;
+    margin: 35px 0 16px;
+    padding: 6.5px 7px 7.5px 16px;
+
+    .container {
+      .search {
+        gap: 8.95px;
+
+        input {
+          width: 184px;
+          font-size: 13px;
+
+          &::placeholder {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .right {
+        gap: 9px;
+
+        button {
+          width: 84px;
+          height: 46px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
