@@ -17,3 +17,9 @@ body {
     background-color: $very-light-gray;
   }
 }
+
+@media (prefer-color-scheme: light) {
+  body {
+    background-color: $very-light-gray;
+  }
+}

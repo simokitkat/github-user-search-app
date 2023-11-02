@@ -132,3 +132,108 @@ $is-dark: true;
     transition: 0s;
   }
 }
+
+@mixin light-header {
+  color: $hover-dark-blue;
+
+  .theme {
+    span {
+      color: $gray;
+    }
+  }
+
+  &:hover {
+    .theme {
+      span {
+        color: $hover-dark-blue;
+      }
+
+      svg {
+        path {
+          fill: $hover-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+@mixin light-form {
+  background: $greyish-white;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+
+  .container {
+    .search {
+      input {
+        color: $hover-dark-blue;
+
+        &::placeholder {
+          color: $light-blue;
+        }
+      }
+    }
+  }
+}
+
+@mixin light-user {
+  background: $greyish-white;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+
+  .container,
+  .mobile-container {
+    .other-data {
+      .name-date {
+        h1 {
+          color: $dark-blue;
+        }
+
+        .date {
+          color: $gray;
+        }
+      }
+
+      .bio {
+        color: $light-blue;
+      }
+
+      .statistics {
+        background-color: $very-light-gray;
+
+        & > div {
+          span {
+            color: $light-blue;
+          }
+
+          h3 {
+            color: $dark-blue;
+          }
+        }
+      }
+
+      .socials {
+        color: $light-blue;
+
+        svg {
+          path {
+            fill: $light-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin light-user-tablet {
+  .mobile-container {
+    .top {
+      .name-date {
+        h1 {
+          color: $dark-blue;
+        }
+
+        .date {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

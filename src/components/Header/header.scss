@@ -39,27 +39,7 @@ header {
 
 //light themed Header
 header.light {
-  color: $hover-dark-blue;
-
-  .theme {
-    span {
-      color: $gray;
-    }
-  }
-
-  &:hover {
-    .theme {
-      span {
-        color: $hover-dark-blue;
-      }
-
-      svg {
-        path {
-          fill: $hover-dark-blue;
-        }
-      }
-    }
-  }
+  @include light-header;
 }
 
 /*************
@@ -77,5 +57,11 @@ header.light {
 @media (width<600px) {
   header {
     height: 38px;
+  }
+}
+
+@media (prefer-color-scheme: light) {
+  header {
+    @include light-header;
   }
 }
