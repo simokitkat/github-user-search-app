@@ -31,6 +31,7 @@ export default function Form({
             placeholder="Search GitHub username…"
             required
             onChange={handleChange}
+            className={isError ? "input-error" : ""}
           />
         </div>
         <div className="right">

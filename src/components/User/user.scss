@@ -79,12 +79,50 @@
 }
 
 .user.light {
-  @include light-user;
-}
+  background: $greyish-white;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 
-@media (prefers-color-scheme: light) {
-  .user {
-    @include light-user;
+  .container,
+  .mobile-container {
+    .other-data {
+      .name-date {
+        h1 {
+          color: $dark-blue;
+        }
+
+        .date {
+          color: $gray;
+        }
+      }
+
+      .bio {
+        color: $light-blue;
+      }
+
+      .statistics {
+        background-color: $very-light-gray;
+
+        & > div {
+          span {
+            color: $light-blue;
+          }
+
+          h3 {
+            color: $dark-blue;
+          }
+        }
+      }
+
+      .socials {
+        color: $light-blue;
+
+        svg {
+          path {
+            fill: $light-blue;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -162,12 +200,18 @@
 
   //light
   .user.light {
-    @include light-user-tablet;
-  }
+    .mobile-container {
+      .top {
+        .name-date {
+          h1 {
+            color: $dark-blue;
+          }
 
-  @media (prefers-color-scheme: light) {
-    .user {
-      @include light-user-tablet;
+          .date {
+            color: $gray;
+          }
+        }
+      }
     }
   }
 }
